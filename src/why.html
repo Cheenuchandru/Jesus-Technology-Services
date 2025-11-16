@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jesus Technology Services | Why Choose Us</title>
     <link rel="stylesheet" href="style.css" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
     <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -30,6 +31,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -195,7 +200,7 @@ section {
   border-radius: var(--border-radius);
   margin: 2rem auto; /* Center the alt-section within main */
   padding: 4rem 2rem; /* Increased vertical padding */
-  max-width: 1200px; /* Constrain width */
+  max-width: 1800px;
 }
 
 .alt-section h2 {
@@ -288,6 +293,36 @@ section {
   opacity: 1;
   transform: translate(0,0) scale(1);
   transition: all 0.9s ease-out;
+}
+header {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 480px) {
+  .icon-orb {
+    width: 70px;
+    height: 70px;
+  }
+
+  .text-container {
+    padding-top: 4.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;   /* Single column */
+    gap: 3rem;                    /* Space between cards */
+    justify-items: center;        /* Center items */
+  }
+
+  .feature-item {
+    max-width: 90%;               /* Prevent card overflow */
+  }
+
+  .text-container {
+    padding-top: 5rem;            /* Extra space for orb */
+  }
 }
 
   </style>
@@ -399,6 +434,7 @@ section {
 
     <section id="what-we-do" class="alt-section">
       <h2>What We Do</h2>
+      <div class="blu">
       <div class="grid">
         <div class="feature-item">
           <div class="icon-orb">
@@ -427,7 +463,7 @@ section {
             <p>Our customized digital solutions encompass web and app development, cybersecurity, and data-driven consulting to propel businesses into the digital era. We craft bespoke technologies that solve real-world problems, enhance user experiences, and optimize workflows. With a focus on security and scalability, these services help you navigate digital challenges and unlock new opportunities for revenue and efficiency.</p>
           </div>
         </div>
-      </div>
+      </div></div>
     </section>
 
     <section id="who-we-serve">
